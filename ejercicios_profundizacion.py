@@ -11,8 +11,8 @@ Programa creado para que practiquen los conocimietos
 adquiridos durante la semana
 '''
 
-__author__ = "Inove Coding School"
-__email__ = "alumnos@inove.com.ar"
+__author__ = "tololo90"
+__email__ = "tololo90@gmail.com"
 __version__ = "1.3"
 
 
@@ -34,7 +34,28 @@ def ej1():
       ej: La suma entre 4.2 y 6.5 es 10.7
 
     '''
+    print("ingrese un numero real")
+    x = int(input())
+    print("ingrese otro numero real")
+    y = int(input())
 
+    suma = x + y
+    resta = x - y
+    resta_2 = y - x
+    multiplicacion = y * x
+    division = y / x
+    division_2 = x / y
+    potencia = x**y
+    potencia_2 = y**x
+
+    print("el resultado de sumar",x,"y",y,"es:",suma)
+    print("el resultado de restar",x,"y",y,"es:",resta)
+    print("el resultado de restar",y,"y",x,"es:",resta_2)
+    print("el resultado de multiplicar",x,"y",y,"es:",multiplicacion)
+    print("el resultado de dividir",y,"y",x,"es:",division)
+    print("el resultado de dividir",x,"y",y,"es:",division_2)
+    print("el resultado de la potencia",x,"al",y,"es:",potencia)
+    print("el resultado de la potencia",y,"al",x,"es:",potencia_2)
 
 def ej2():
     print('Ejercicios de práctica numérica y cadenas')
@@ -46,7 +67,7 @@ def ej2():
     - La altura de la persona
 
     Finalmente el programa debe imprimir dos líneas de texto por separado
-    - En una línea imprimir el nombre completo y el DNI, aclarando de que
+    - En una línea imprimir el nombre aclarando de que
       campo se trata cada uno
             Ej: Nombre Completo: Nombre Apellido , DNI:35205070,
     - En la segunda línea se debe imprimir el nombre completo, edad y
@@ -55,7 +76,16 @@ def ej2():
       entienda de que se está hablando.
 
     '''
-
+    print("ingrese su nombre completo")
+    a = str(input())
+    print("ingrese su numero de documento")
+    b = int(input())
+    print ("ingrese su edad")
+    c = int(input())
+    print("ingrese su altura en cm")
+    d = int(input())
+    print("nombre completo:",a,"dni:",b)
+    print("nombre completo:",a,"edad:",c, "altura en cm:",d)
 
 def ej3():
     print('Ejercicios de práctica con cadenas')
@@ -89,7 +119,17 @@ def ej3():
     Cualquier duda con el método split pueden consultarla por el campus
 
     '''
-
+    print("ingrese nombre y apellido de su padre")
+    padre = str(input())
+    print("ingrese nombre y apellido de su madre")
+    madre = str(input())
+    print("ingrese su nombre")
+    hijo = str(input())
+    padre_2 = padre.split()
+    madre_2 = madre.split()
+    nombre_completo = hijo + " " + padre_2[-1] + " " + madre_2[-1]
+    print("su nombre completo es ", nombre_completo)
+    
 
 def ej4():
     # Ejercicios de práctica con cadenas
@@ -123,8 +163,13 @@ def ej4():
 
     Cualquier duda con el método split pueden consultarla por el campus
     '''
-
-
+    print("ingrese nombre y apellido de la primer persona")
+    persona_1 = str(input())
+    print("ingrese nombre y apellido de la segunda persona")
+    persona_2 = str(input())
+    apellido_persona_2 = persona_2.split()
+    parientes = apellido_persona_2[-1] in persona_1
+    print("son parientes",persona_1, "y",persona_2,"?",parientes)
 def ej5():
     # Ejercicios de práctica con cadenas
     print('Ahora si! buena suerte!')
@@ -149,12 +194,15 @@ def ej5():
 
     Cualquier duda con estos métodos pueden consultarla por el campus
     '''
-
-
+    print("ingrese su nombre y apellido")
+    nombre = str(input())
+    print(nombre.lower())
+    print(nombre.upper())
+    print(nombre.capitalize())
 if __name__ == '__main__':
     print("Ejercicios de práctica")
     ej1()
-    # ej2()
-    # ej3()
-    # ej4()
-    # ej5()
+    ej2()
+    ej3()
+    ej4()
+    ej5()
